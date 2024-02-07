@@ -1,3 +1,7 @@
+---
+typora-copy-images-to: upload
+---
+
 # typora-fro
 
 A Typora theme used almostly the same style as my [blog site](https://fro-blo.com). (Feel free to visit!)
@@ -13,11 +17,11 @@ Some design are inspired by the default theme of [VitePress](https://vitepress.d
 
 ## Screenshot
 
-![截屏2024-02-07 17.15.01](/Users/jayqing/Library/Application Support/typora-user-images/截屏2024-02-07 17.15.01.png)
+![Screenshot_1](./upload/screenshot_1.png)
 
-![截屏2024-02-07 17.14.31](/Users/jayqing/Library/Application Support/typora-user-images/截屏2024-02-07 17.14.31.png)
+![Screenshot_2](./upload/screenshot_2.png)
 
-![截屏2024-02-07 17.26.45](/Users/jayqing/Desktop/截屏2024-02-07 17.26.45.png)
+![screenshot_3](./upload/screenshot_3.png)
 
 ## TODO
 
