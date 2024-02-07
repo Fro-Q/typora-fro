@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --blur-text-color: rgba(0, 0, 0, 0.4);
+  --code-background-color: #f7f7f7;
+  --quote-background-color: rgba(0, 0, 0, 0.05);
+  --border-color: #a1a4a8;
+  --border-color-hover: #6a737d;
+  --text-color: #444;
+  --text-muted-color: #666;
+  --text-faded-color: #999;
+  --a-color: #111;
+  --bg-color: #fff;
+  --accent-color: #000;
+
+  --block-note-bg: rgba(25, 134, 255, 0.16);
+  --block-tip-bg: rgba(0, 191, 165, 0.16);
+  --block-important-bg: rgba(153, 102, 232, 0.16);
+  --block-warning-bg: rgba(234, 179, 8, .16);
+  --block-caution-bg: rgba(244, 63, 94, .16);
+
+  --select-text-bg-color: rgba(0, 0, 0, 0.1);
+  /* --select-text-font-color: #000; */
+
+}
+
+#write {
+  max-width: 800px;
+  line-height: 1.6;
+  font-size: 14px;
+
+}
+
+
+
+content {
+  color: var(--text-color);
+}
+
+content::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+content::-webkit-scrollbar-thumb {
+  width: 8px;
+  border-right: 1px solid var(--active-file-border-color);
+  transition: all 0.3s;
+}
+
+content::-webkit-scrollbar-thumb:hover {
+  width: 9px;
+  border-right: none;
+  background-color: var(--active-file-border-color);
+  border-radius: 2px;
+}
+
+.md-meta-block {
+  opacity: 0.3;
+  padding: 1rem;
+  transition: all 0.3s;
+}
+
+.md-meta-block:hover {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+:is(h2, h3, h4, h5, h6)::before {
+  /* paragraph symbol */
+  content: "#";
+  margin-right: 0.5rem;
+  color: var(--blur-text-color);
+}
+
+pre.ty-contain-cm {
+  max-width: 90%;
+  margin: 2rem auto;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  page-break-inside: avoid;
+}
+
+pre .CodeMirror {
+  page-break-inside: avoid;
+}
+
+pre .CodeMirror-scroll {
+  border-radius: 5px;
+  overflow-x: auto;
+  background-color: var(--code-background-color);
+  page-break-inside: avoid;
+}
+
+pre .CodeMirror-sizer {
+}
+
+pre .CodeMirror-code {
+}
+
+pre .CodeMirror-lines {
+  margin: 1rem;
+  page-break-inside: avoid;
+}
+
+pre .CodeMirror-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+pre .CodeMirror-scroll::-webkit-scrollbar-thumb {
+  height: 8px;
+  border-bottom: 1px solid var(--active-file-border-color);
+  transition: all 0.3s;
+}
+
+pre .CodeMirror-scroll::-webkit-scrollbar-thumb:hover {
+  height: 9px;
+  border-bottom: none;
+  background-color: var(--active-file-border-color);
+  border-radius: 2px;
+}
+
+pre .CodeMirror-gutters {
+  height: 100% !important;
+}
+
+pre .CodeMirror-gutter {
+}
+
+pre .CodeMirror-linenumber {
+  padding-right: 0.5rem;
+  width: 2rem !important;
+  text-align: center;
+  left: -5px !important;
+
+}
+
+.code-tooltip.md-tooltip-remove {
+  border: 1px solid var(--active-file-border-color);
+  border-radius: 5px;
+
+}
+
+blockquote {
+  margin: 16px auto;
+  padding: 20px 30px;
+  background-color: var(--quote-background-color);
+  border-radius: 4px;
+  border-left: 4px solid var(--text-muted-color);
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 0;
+}
+
+blockquote > :is(p, ol, ul, pre, table):first-child::before {
+  content: "format_quote";
+  font-family: "Material Icons";
+  position: absolute;
+  display: block;
+  top: -30px;
+  right: -20px;
+  font-size: 2.4rem;
+  color: var(--text-muted-color);
+  opacity: 0.2;
+}
+
+blockquote:hover {
+  border-left: 4px solid var(--text-color);
+}
+
+#write p code {
+  padding: 2px 4px;
+  font-size: 0.9em;
+  color: var(--text-muted-color);
+  background-color: var(--code-background-color);
+  border-radius: 4px;
+}
+#write p code::before {
+  content: "`";
+}
+#write p code::after {
+  content: "`";
+}
+#write p strong {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+#write p u {
+  text-underline-offset: 3px;
+}
+#write p mark {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) mark span {
+  background-color: var(--accent-color);
+  color: var(--bg-color) !important;
+}
+
+#write p sup {
+  font-size: 0.8em;
+  line-height: 1;
+  top: -0.5em;
+  background-color: transparent;
+}
+
+#write p sup::before {
+  content: "[";
+  position: relative;
+}
+
+#write p sup::after {
+  content: "]";
+  position: relative;
+}
+
+#write p sup.md-expand::after,
+#write p sup.md-expand::before {
+  display: none;
+}
+
+#write p ul li::marker, content p ol li::marker {
+  color: var(--accent-color);
+}
+
+#write p a {
+  color: var(--a-color);
+  text-decoration-color: var(--text-color);
+  text-underline-offset: 3px;
+}
+
+#write .md-alert {
+  margin: 16px auto;
+  padding: 10px 30px;
+  border-radius: 4px;
+  border-left: none;
+  page-break-inside: avoid;
+}
+
+#write .md-alert.md-alert-note {
+  background-color: var(--block-note-bg);
+}
+
+#write .md-alert.md-alert-tip {
+  background-color: var(--block-tip-bg);
+}
+
+#write .md-alert.md-alert-important {
+  background-color: var(--block-important-bg);
+}
+
+#write .md-alert.md-alert-warning {
+  background-color: var(--block-warning-bg);
+}
+
+#write .md-alert.md-alert-caution {
+  background-color: var(--block-caution-bg);
+}
+
+.md-toc {
+  margin: 2rem auto;
+}
+
+a.md-toc-inner {
+  font-size: 1.2rem;
+}
+
+.md-toc .md-toc-tooltip {
+  display: block !important;
+}
+
+.md-toc .md-toc-tooltip span {
+  font-size: 1.5rem;
+}
